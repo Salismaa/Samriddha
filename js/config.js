@@ -77,7 +77,7 @@ I love you more than I can put into words.
 
       x: "Such a magical moment with you. I wish i could just relive that night again.",
 
-      img: "stupid.jpg"
+      img: "image4.JPG"
     }
 
   ],
