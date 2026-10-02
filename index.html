@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>For My Cutie 🎀</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Lora:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ============================= -->
+  <!-- PASSWORD PAGE -->
+  <!-- ============================= -->
+
+  <section id="lock" class="page active">
+
+    <div class="lock-card">
+
+      <div class="lock-heart">💗</div>
+
+      <h1 id="ttl">For My Cutie 🎀</h1>
+
+      <p class="lock-subtitle">
+        A tiny little world made just for you.
+      </p>
+
+      <div class="password-box">
+
+        <input
+          type="password"
+          id="pw"
+          placeholder="Enter the secret password..."
+          autocomplete="off"
+        >
+
+        <button id="open">
+          Open My Heart 💕
+        </button>
+
+      </div>
+
+      <p id="hint" class="hint"></p>
+
+      <p id="err" class="error"></p>
+
+    </div>
+
+  </section>
+
+
+  <!-- ============================= -->
+  <!-- HOME PAGE -->
+  <!-- ============================= -->
+
+  <section id="home" class="page">
+
+    <div class="home-container">
+
+      <div class="home-header">
+
+        <div class="tiny-heart">💗</div>
+
+        <h1>For My Cutie</h1>
+
+        <p>
+          A little website filled with pieces of my heart.
+        </p>
+
+      </div>
+
+
+      <div class="home-grid">
+
+        <!-- LOVE LETTER -->
+
+        <button class="tile" onclick="go('letter')">
+
+          <span class="em">💌</span>
+
+          <span class="tile-title">
+            My Letter
+          </span>
+
+          <span class="tile-text">
+            Something I want you to know...
+          </span>
+
+        </button>
+
+
+        <!-- OUR STORY -->
+
+        <button class="tile" onclick="go('story')">
+
+          <span class="em">📸</span>
+
+          <span class="tile-title">
+            Our Story
+          </span>
+
+          <span class="tile-text">
+            Little moments that became memories.
+          </span>
+
+        </button>
+
+
+        <!-- LOVE JAR -->
+
+        <button class="tile" onclick="go('jar')">
+
+          <span class="em">🫙</span>
+
+          <span class="tile-title">
+            Love Jar
+          </span>
+
+          <span class="tile-text">
+            Pick a little reason why I love you.
+          </span>
+
+        </button>
+
+
+        <!-- COUPONS -->
+
+        <button class="tile" onclick="go('coupons')">
+
+          <span class="em">🎟️</span>
+
+          <span class="tile-title">
+            Love Coupons
+          </span>
+
+          <span class="tile-text">
+            Little things you can redeem.
+          </span>
+
+        </button>
+
+
+        <!-- VIDEO -->
+
+        <button class="tile video-tile" onclick="go('video')">
+
+          <span class="em">🎥</span>
+
+          <span class="tile-title">
+            Our Video
+          </span>
+
+          <span class="tile-text">
+            A little memory of us.
+          </span>
+
+        </button>
+
+
+        <!-- SURPRISE -->
+
+        <button class="tile" onclick="go('surprise')">
+
+          <span class="em">🎁</span>
+
+          <span class="tile-title">
+            One More Thing
+          </span>
+
+          <span class="tile-text">
+            I saved one last surprise for you.
+          </span>
+
+        </button>
+
+      </div>
+
+
+      <p class="home-footer">
+        Made with love by Salisma 💗
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- ============================= -->
+  <!-- LOVE LETTER PAGE -->
+  <!-- ============================= -->
+
+  <section id="letter" class="page">
+
+    <button class="back" onclick="go('home')">
+      ← Back
+    </button>
+
+    <div class="card letter-card">
+
+      <div class="section-icon">
+        💌
+      </div>
+
+      <h2>
+        A Letter For You
+      </h2>
+
+      <div id="letterText" class="letter-text"></div>
+
+      <div class="signature">
+        With all my love,<br>
+        <span>Salisma 💗</span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ============================= -->
+  <!-- OUR STORY PAGE -->
+  <!-- ============================= -->
+
+  <section id="story" class="page">
+
+    <button class="back" onclick="go('home')">
+      ← Back
+    </button>
+
+    <div class="card">
+
+      <div class="section-icon">
+        📸
+      </div>
+
+      <h2>
+        Our Little Story
+      </h2>
+
+      <p class="section-intro">
+        Some moments become memories without us even realizing it.
+      </p>
+
+      <div id="storyList"></div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ============================= -->
+  <!-- LOVE JAR PAGE -->
+  <!-- ============================= -->
+
+  <section id="jar" class="page">
+
+    <button class="back" onclick="go('home')">
+      ← Back
+    </button>
+
+    <div class="card jar-card">
+
+      <div class="section-icon">
+        🫙
+      </div>
+
+      <h2>
+        Our Love Jar
+      </h2>
+
+      <p class="section-intro">
+        Pick a little note from my heart.
+      </p>
+
+      <div class="jar">
+        💗
+      </div>
+
+      <div id="reason" class="reason">
+        Click the button to get a reason.
+      </div>
+
+      <button id="reasonBtn" class="main-btn">
+        Pick a Note 💕
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- ============================= -->
+  <!-- COUPONS PAGE -->
+  <!-- ============================= -->
+
+  <section id="coupons" class="page">
+
+    <button class="back" onclick="go('home')">
+      ← Back
+    </button>
+
+    <div class="card">
+
+      <div class="section-icon">
+        🎟️
+      </div>
+
+      <h2>
+        Love Coupons
+      </h2>
+
+      <p class="section-intro">
+        Little things you can redeem whenever you want.
+      </p>
+
+      <div id="couponList" class="coupon-list"></div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ============================= -->
+  <!-- VIDEO PAGE -->
+  <!-- ============================= -->
+
+  <section id="video" class="page">
+
+    <button class="back" onclick="go('home')">
+      ← Back
+    </button>
+
+    <div class="card video-card">
+
+      <div class="video-icon">
+        🎥
+      </div>
+
+      <h2>
+        Our Little Video 💗
+      </h2>
+
+      <p class="video-intro">
+        Some memories are too special to stay only in our camera roll.
+      </p>
+
+
+      <!-- VIDEO POLAROID -->
+
+      <div class="video-polaroid">
+
+        <div class="video-tape"></div>
+
+        <video
+          class="our-video"
+          controls
+          playsinline
+          preload="metadata"
+        >
+
+          <source
+            src="video/us.mp4"
+            type="video/mp4"
+          >
+
+          Your browser does not support video playback.
+
+        </video>
+
+
+        <div class="video-caption">
+          Salisma & Samriddha 💕
+        </div>
+
+      </div>
+
+
+      <!-- TEXT AREA UNDER VIDEO -->
+
+      <div class="video-letter">
+
+        <h3>
+          A Little Message For You 💌
+        </h3>
+
+        <p>
+          <!--
+          ✨ CHANGE THIS TEXT ✨
+
+          You can write anything here.
+          For example:
+          "Every time I watch this video, I remember
+          how lucky I am to have you..."
+          -->
+
+          Every little moment with you becomes a memory
+          that I want to keep forever.
+          From our friends teasing us to now,our journey was filled with chaos and so much fun.
+          Every moment with you is so precious to me. You literally bought my spark back in my eyes. 🥹💗
+
+
+          I hope whenever you watch this,
+          you remember how much you are loved. You're everything i want.
+
+          No matter how many memories we make,
+          I will always want one more with you. 🎀 Can't wait to make more memories with you. 
+
+        </p>
+
+      </div>
+
+
+      <!-- SMALL FINAL MESSAGE -->
+
+      <p class="video-message">
+        Here's to all the memories we've already made
+        and all the ones still waiting for us. ❤️
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- ============================= -->
+  <!-- SURPRISE PAGE -->
+  <!-- ============================= -->
+
+  <section id="surprise" class="page">
+
+    <button class="back" onclick="go('home')">
+      ← Back
+    </button>
+
+    <div class="card surprise-card">
+
+      <div class="gift" id="gift">
+        🎁
+      </div>
+
+      <h2>
+        One More Thing...
+      </h2>
+
+      <p>
+        I saved something special for you.
+      </p>
+
+      <button id="surpriseBtn" class="main-btn">
+        Open It 💗
+      </button>
+
+      <div id="finale" class="finale"></div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ============================= -->
+  <!-- JAVASCRIPT -->
+  <!-- ============================= -->
+
+  <script src="js/config.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>
